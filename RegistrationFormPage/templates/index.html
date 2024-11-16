@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Application Form</title>
+    <link id="style-link" rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <form id="application-form">
+        <h1>Application Form</h1>
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <label>Programming Languages:</label>
+        
+        <label for="java"><input type="checkbox" id="C" name="language" value="C#"> C#</label>
+        
+        <label for="javascript"><input type="checkbox" id="HTML" name="language" value="Html & Css"> Html & Css</label>
+        
+        <label for="python"><input type="checkbox" id="python" name="language" value="python"> Python</label>
+
+        <label for="python"><input type="checkbox" id="Java" name="language" value="Java"> Java</label>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <div class="button-container">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+            <button id="switchstyle">Switch Style</button>
+        </div>
+    </form>
+
+    <script>
+        const form = document.getElementById("application-form");
+        const switchStyleButton = document.getElementById("switchstyle");
+        const styleLink = document.getElementById("style-link");
+
+        // Массив с путями к стилям
+        const styles = [
+            '/static/style.css',
+            '/static/style_glitch.css',
+            '/static/style_wood.css',
+            '/static/style_liquid.css'
+        ];
+
+        let currentStyleIndex = 0;
+
+        // Обработчик клика по кнопке Switch Style
+        switchStyleButton.addEventListener("click", () => {
+            currentStyleIndex = (currentStyleIndex + 1) % styles.length;  // Переходим к следующему стилю
+            styleLink.href = styles[currentStyleIndex];  // Меняем стиль
+        });
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch('/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data),
+                });
+
+                const result = await response.json();
+                alert(result.message);
+            } catch (error) {
+                alert("Error: " + error.message);
+            }
+        });
+    </script>
+</body>
+</html>

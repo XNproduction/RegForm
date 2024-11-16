@@ -1,0 +1,65 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    background: #ffffff;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+}
+
+form {
+    border: 2px solid #000000;
+    padding: 20px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #ffffff;
+    margin-top: 150px; /* Отступ сверху */
+    margin-bottom: 150px;
+}
+
+label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+input, select {
+    padding: 10px;
+    border: 2px solid #000000;
+    font-size: 0.9rem;
+    outline: none;
+    margin-top: 5px;
+}
+
+input[type="submit"], input[type="reset"],  button {
+    background: #000000;
+    color: #ffffff;
+    text-transform: uppercase;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover,  button:hover {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}

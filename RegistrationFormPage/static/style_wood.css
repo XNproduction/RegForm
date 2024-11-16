@@ -1,0 +1,76 @@
+/* Wood Style */
+body {
+    font-family: 'Roboto Mono', monospace;
+    background: url('https://images.wallpaperscraft.ru/image/single/les_tuman_vid_sverhu_129318_3840x2160.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #4e342e;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+}
+
+form {
+    background: url('https://th.bing.com/th/id/R.602c2b09e195fc711bca86e853ab317e?rik=KLvoLLOJFosapQ&pid=ImgRaw&r=0') repeat center center fixed;
+    padding: 20px;
+    margin: 20px auto;
+    border: 3px solid #463733;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 10px;
+    margin-top: 150px; /* Отступ сверху */
+    margin-bottom: 150px;
+    
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    text-shadow: #000000;
+}
+
+input, select {
+    padding: 10px;
+    border: 2px solid #d1c3c0;
+    font-size: 0.9rem;
+    outline: none;
+    margin-top: 5px;
+    background: rgba(255, 255, 255, 0.7);
+    color: #ffffff;
+    background: url('https://th.bing.com/th/id/R.602c2b09e195fc711bca86e853ab317e?rik=KLvoLLOJFosapQ&pid=ImgRaw&r=0') repeat;
+}
+
+input[type="submit"], input[type="reset"], button {
+    background-color: #6d4c41;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background: url('https://th.bing.com/th/id/R.602c2b09e195fc711bca86e853ab317e?rik=KLvoLLOJFosapQ&pid=ImgRaw&r=0') repeat;
+}
+
+button:hover {
+    background-color: #4e342e;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}

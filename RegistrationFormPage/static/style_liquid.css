@@ -1,0 +1,77 @@
+/* Liquid Style */
+body {
+    font-family: 'Roboto Mono', monospace;
+    background: radial-gradient(circle at center, #0f0f0f, #000);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+form {
+    border: 2px solid #ffffff;
+    padding: 20px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    margin-top: 150px; /* Отступ сверху */
+    margin-bottom: 150px;
+}
+
+label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ccc;
+}
+
+input, select {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
+input[type="submit"], input[type="reset"], button {
+    margin-top: 20px;
+    background: linear-gradient(90deg, #ff00ff, #00ffff);
+    color: #000;
+    text-transform: uppercase;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover, button:hover {
+    background: linear-gradient(90deg, #00ffff, #ff00ff);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
